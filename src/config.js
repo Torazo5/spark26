@@ -1,5 +1,5 @@
 // Rename here once the name is final.
-export const APP_NAME = 'Commons'
+export const APP_NAME = 'Porch'
 export const PLACE = 'the Residences'
 
 export const COLLEGES = ['Pomona', 'Claremont McKenna', 'Scripps', 'Harvey Mudd', 'Pitzer']
