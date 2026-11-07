@@ -112,18 +112,16 @@ export function PostCard({ post, highlight }) {
           <div className="meta-row"><Icon name="tools" />Needs {post.roles.join(', ').toLowerCase()}</div>}
         {post.type === 'class' && <div className="meta-row"><Icon name="level" />{post.level}</div>}
         {post.type === 'event' && post.bring && <div className="meta-row"><Icon name="bag" />{post.bring}</div>}
+        <div className="meta-row"><Icon name="users" />{mixLine(mixCounts(ppl))}</div>
       </div>
       <PersonRow user={host} extra={host.id === me.id ? ' (you)' : ''} />
       <div className="tags">{post.tags.map(t => <span className="tag" key={t}>{t}</span>)}</div>
       <div className="card-foot">
         <div className="foot-people">
           <AvatarStack users={ppl} />
-          <div>
-            <div className="small">{mixLine(mixCounts(ppl))}</div>
-            {left !== null && <div className={'small ' + (left <= 3 ? 'warn' : 'muted')}>
-              {left <= 0 ? 'Full' : `${left} spot${left === 1 ? '' : 's'} left`}
-            </div>}
-          </div>
+          {left !== null && <span className={'small ' + (left <= 3 ? 'warn' : 'muted')}>
+            {left <= 0 ? 'Full' : `${left} spot${left === 1 ? '' : 's'} left`}
+          </span>}
         </div>
         <JoinButton post={post} />
       </div>

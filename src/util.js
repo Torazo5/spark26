@@ -35,7 +35,7 @@ export function mixCounts(list) {
 }
 
 export const mixLine = ({ students, staff }) =>
-  `${students} student${students === 1 ? '' : 's'} · ${staff} staff & faculty`
+  `${students} student${students === 1 ? '' : 's'} · ${staff} staff/faculty`
 
 export const spotsLeft = p => (p.capacity ? p.capacity - p.attendees.length : null)
 
